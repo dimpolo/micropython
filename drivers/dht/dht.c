@@ -49,8 +49,6 @@ STATIC mp_obj_t dht_readinto(mp_obj_t pin_in, mp_obj_t buf_in) {
     }
 
     // issue start command
-    mp_hal_pin_od_high_dht(pin);
-    mp_hal_delay_ms(250);
     mp_hal_pin_od_low(pin);
     mp_hal_delay_ms(18);
 
